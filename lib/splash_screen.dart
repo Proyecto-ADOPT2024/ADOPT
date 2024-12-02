@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:adopt/home.dart';
+import 'package:adopt/login.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,9 +14,9 @@ class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(milliseconds: (5.55 * 1000).round()), () {
+    Timer(Duration(milliseconds: (5.525 * 1000).round()), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
+        MaterialPageRoute(builder: (context) => const Login()),
       );
     });
   }
@@ -32,8 +32,7 @@ class SplashScreenState extends State<SplashScreen> {
   Widget content() {
     return Center(
       child: Container(
-        child:
-            Lottie.asset("assets/splash_screen_animation.json", animate: true),
+        child: Lottie.asset("assets/splash_screen.json", animate: true),
       ),
     );
   }

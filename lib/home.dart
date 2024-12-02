@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const HomeScreen());
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class home extends StatelessWidget {
+  const home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Material app bar"),
-        ),
-      ),
+      home: Indefinido(),
     );
+  }
+}
+
+class Indefinido extends StatelessWidget {
+  const Indefinido({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold();
   }
 }
