@@ -1,4 +1,4 @@
-import 'package:adopt/home.dart';
+import 'package:adopt/Home.dart';
 import 'package:adopt/registro.dart';
 import 'package:flutter/material.dart';
 

@@ -7,12 +7,12 @@ class Registro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: Pagina_registro());
+        debugShowCheckedModeBanner: false, home: PaginaRegistro());
   }
 }
 
-class Pagina_registro extends StatelessWidget {
-  const Pagina_registro({super.key});
+class PaginaRegistro extends StatelessWidget {
+  const PaginaRegistro({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
