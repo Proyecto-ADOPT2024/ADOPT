@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
               //Titulo
               const SizedBox(height: 20),
               const Text(
-                'Iniciar seccion',
+                'Iniciar sección',
                 style: TextStyle(
                   fontSize: 32.0,
                   fontWeight: FontWeight.bold,
@@ -110,7 +110,7 @@ class LoginScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const home()));
+                      MaterialPageRoute(builder: (context) => const Home()));
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
