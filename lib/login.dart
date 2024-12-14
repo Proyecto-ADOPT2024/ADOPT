@@ -48,7 +48,8 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Image.asset('assets/image/logo.png', width: 120, height: 120),
+                Image.asset('lib/assets/image/logo.png',
+                    width: 120, height: 120),
 
                 //Titulo
                 const SizedBox(height: 20),
@@ -74,8 +75,17 @@ class LoginScreen extends StatelessWidget {
                 //campo de usuario
                 const SizedBox(height: 40),
                 TextFormField(
+                  style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width > 600
+                          ? 18.0
+                          : 16.0), // Ajusta el tamaño de la fuente para pantallas grandes
                   controller: usernameController,
                   decoration: InputDecoration(
+                    contentPadding: MediaQuery.of(context).size.width > 600
+                        ? const EdgeInsets.symmetric(
+                            horizontal:
+                                20.0) // Más espacio en pantallas grandes
+                        : const EdgeInsets.symmetric(horizontal: 10.0),
                     prefixIcon: const Icon(Icons.person),
                     labelText: '@username',
                     hintText: "Ingresa tu nombre de usuario",
@@ -91,6 +101,8 @@ class LoginScreen extends StatelessWidget {
                     }
                     if (value.length < 4) {
                       return "Debe usuario debe tener al menos 4 caracteres";
+                    } else {
+                      return null;
                     }
                   },
                 ),
@@ -116,6 +128,8 @@ class LoginScreen extends StatelessWidget {
                     }
                     if (value.length < 6) {
                       return "Debe tener al menos 6 caracteres";
+                    } else {
+                      return null;
                     }
                   },
                 ),
@@ -173,7 +187,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     Image.asset(
-                      'assets/image/logo_google.png',
+                      'lib/assets/image/logo_google.png',
                       width: 30,
                       height: 30,
                     ),

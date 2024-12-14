@@ -46,7 +46,8 @@ class PaginaRegistro extends StatelessWidget {
 
               //logo
               children: [
-                Image.asset('assets/image/logo.png', width: 120, height: 120),
+                Image.asset('lib/assets/image/logo.png',
+                    width: 120, height: 120),
 
                 //Titulo
                 const SizedBox(height: 20),
@@ -91,6 +92,8 @@ class PaginaRegistro extends StatelessWidget {
                     if (!RegExp(r'^[a-zA-Z0-9._%+-]+@gmail\.com$')
                         .hasMatch(value)) {
                       return "Introduce un correo valido";
+                    } else {
+                      return null;
                     }
                   },
                 ),
@@ -115,6 +118,8 @@ class PaginaRegistro extends StatelessWidget {
                     }
                     if (value.length < 4) {
                       return "Debe usuario debe tener al menos 4 caracteres";
+                    } else {
+                      return null;
                     }
                   },
                 ),
@@ -140,6 +145,8 @@ class PaginaRegistro extends StatelessWidget {
                     }
                     if (value.length < 6) {
                       return "Debe tener al menos 6 caracteres";
+                    } else {
+                      return null;
                     }
                   },
                 ),
@@ -197,7 +204,7 @@ class PaginaRegistro extends StatelessWidget {
                       ),
                     ),
                     Image.asset(
-                      'assets/image/logo_google.png',
+                      'lib/assets/image/logo_google.png',
                       width: 30,
                       height: 30,
                     ),

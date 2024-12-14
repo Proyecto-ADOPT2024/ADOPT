@@ -32,8 +32,8 @@ class SplashScreenState extends State<SplashScreen> {
   Widget content() {
     return Center(
       child: Container(
-        child:
-            Lottie.asset("assets/splash_screen_animation.json", animate: true),
+        child: Lottie.asset("lib/assets/splash_screen_animation.json",
+            animate: true),
       ),
     );
   }
